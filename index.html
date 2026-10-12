@@ -1,54 +1,73 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mai Danh Tien - 24521771</title>
+    <meta name="description" content="Developer portfolio of Mai Danh Tien.">
+    <title>Mai Danh Tien - Developer Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <a href="#main">Skip to Content</a>
+    <a class="skip-link" href="#main">Skip to Content</a>
 
-    <header>
-        <h1>Mai Danh Tien - 24521771</h1>
+    <header class="site-header">
+        <h1>Mai Danh Tien</h1>
+        <p class="subtitle">Developer Portfolio</p>
 
         <nav aria-label="Primary">
-            <ul>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="main">
-
-        <section id="about">
-            <h2>About</h2>
+    <main id="main" class="portfolio-grid">
+        <section id="about" class="card about-card">
+            <h2>About Me</h2>
             <p>
-                Information about Mai Danh Tien.
+                Hello! I'm Mai Danh Tien, a student interested in
+                software development and building useful applications.
             </p>
         </section>
 
-        <section id="projects">
+        <section id="skills" class="card skills-card">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5 and Semantic HTML</li>
+                <li>CSS3 and Responsive Design</li>
+                <li>Python Programming</li>
+                <li>Git and GitHub</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="card projects-card">
             <h2>Projects</h2>
-            <p>
-                Information about projects.
-            </p>
-        </section>
 
+            <article class="project-item">
+                <h3>Semantic DOM Architecture</h3>
+                <p>
+                    A semantic HTML page designed with accessibility
+                    and keyboard navigation in mind.
+                </p>
+            </article>
+
+            <article class="project-item">
+                <h3>Product Management Application</h3>
+                <p>
+                    A Python project for managing product and order data.
+                </p>
+            </article>
+        </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <p>© 2026 Mai Danh Tien</p>
     </footer>
-
 </body>
 
 </html>
