@@ -7,77 +7,236 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Developer portfolio of Mai Danh Tien.">
     <title>Mai Danh Tien - Developer Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/main.js" defer></script>
 </head>
 
 <body>
     <a class="skip-link" href="#main">Skip to Content</a>
 
     <header class="site-header">
-        <h1>Mai Danh Tien</h1>
-        <p class="subtitle">Developer Portfolio</p>
-        
-    <button
-        id="theme-toggle"
-        type="button"
-        aria-pressed="false"
-    >
-        Switch to Dark Mode
-    </button>
+        <a class="site-logo" href="#home">MDT<span>.</span></a>
 
-        
-        <nav aria-label="Primary">
+        <nav aria-label="Primary navigation">
             <ul class="nav-list">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+
+        <button
+            id="theme-toggle"
+            type="button"
+            aria-pressed="false"
+        >
+            Switch to Dark Mode
+        </button>
     </header>
 
-    <main id="main" class="portfolio-grid">
-        <section id="about" class="card about-card">
+    <main id="main">
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <p class="eyebrow">HELLO, I'M</p>
+                <h1>Mai Danh Tien</h1>
+                <p class="hero-title">Aspiring Software Developer</p>
+                <p class="hero-description">
+                    I am a student passionate about software development,
+                    web technologies, and building useful applications.
+                </p>
+                <a class="button-link" href="#projects">
+                    Explore My Projects
+                </a>
+            </div>
+
+            <figure class="hero-portrait">
+                <img
+                    src="https://placehold.co/400x480?text=Your+Photo"
+                    alt="Placeholder portrait for Mai Danh Tien"
+                    width="400"
+                    height="480"
+                >
+                <figcaption>Developer Portfolio</figcaption>
+            </figure>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section">
             <h2>About Me</h2>
             <p>
-                Hello! I'm Mai Danh Tien, a student interested in
-                software development and building useful applications.
+                I am learning to design and develop accessible,
+                responsive, and maintainable web applications.
+                I enjoy solving problems and improving my programming skills.
             </p>
         </section>
 
-        <section id="skills" class="card skills-card">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML5 and Semantic HTML</li>
-                <li>CSS3 and Responsive Design</li>
-                <li>Python Programming</li>
-                <li>Git and GitHub</li>
+        <!-- Skills Matrix -->
+        <section id="skills" class="content-section">
+            <h2>Skills Matrix</h2>
+
+            <ul class="skills-grid">
+                <li class="skill-card">
+                    <h3>HTML5</h3>
+                    <p>Semantic structure and accessibility</p>
+                </li>
+
+                <li class="skill-card">
+                    <h3>CSS3</h3>
+                    <p>Responsive layouts and CSS Grid</p>
+                </li>
+
+                <li class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>DOM manipulation and event handling</p>
+                </li>
+
+                <li class="skill-card">
+                    <h3>Python</h3>
+                    <p>Programming and data processing</p>
+                </li>
+
+                <li class="skill-card">
+                    <h3>Git &amp; GitHub</h3>
+                    <p>Version control and collaboration</p>
+                </li>
+
+                <li class="skill-card">
+                    <h3>SQL</h3>
+                    <p>Relational databases and queries</p>
+                </li>
             </ul>
         </section>
 
-        <section id="projects" class="card projects-card">
-            <h2>Projects</h2>
+        <!-- Project Cards -->
+        <section id="projects" class="content-section">
+            <h2>Featured Projects</h2>
 
-            <article class="project-item">
-                <h3>Semantic DOM Architecture</h3>
-                <p>
-                    A semantic HTML page designed with accessibility
-                    and keyboard navigation in mind.
-                </p>
-            </article>
+            <div class="projects-grid">
+                <article class="project-card" data-category="frontend">
+                    <header class="project-card-header">
+                        <p class="project-category">Frontend</p>
+                        <h3>Semantic DOM Architecture</h3>
+                    </header>
 
-            <article class="project-item">
-                <h3>Product Management Application</h3>
-                <p>
-                    A Python project for managing product and order data.
-                </p>
-            </article>
+                    <p>
+                        A semantic HTML portfolio focused on accessibility,
+                        meaningful page structure, and keyboard navigation.
+                    </p>
+
+                    <ul class="tag-list" aria-label="Technologies used">
+                        <li>HTML5</li>
+                        <li>Accessibility</li>
+                        <li>CSS</li>
+                    </ul>
+
+                    <footer class="project-card-footer">
+                        <a href="#about">View Project Details</a>
+                    </footer>
+                </article>
+
+                <article class="project-card" data-category="python">
+                    <header class="project-card-header">
+                        <p class="project-category">Python</p>
+                        <h3>Product Management Application</h3>
+                    </header>
+
+                    <p>
+                        A Python application for managing products,
+                        orders, quantities, and total prices.
+                    </p>
+
+                    <ul class="tag-list" aria-label="Technologies used">
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>Data Management</li>
+                    </ul>
+
+                    <footer class="project-card-footer">
+                        <a href="#contact">Ask About This Project</a>
+                    </footer>
+                </article>
+
+                <article class="project-card" data-category="web">
+                    <header class="project-card-header">
+                        <p class="project-category">Web Development</p>
+                        <h3>Responsive Portfolio</h3>
+                    </header>
+
+                    <p>
+                        A responsive portfolio with reusable UI components
+                        and a persistent light and dark theme.
+                    </p>
+
+                    <ul class="tag-list" aria-label="Technologies used">
+                        <li>CSS Grid</li>
+                        <li>JavaScript</li>
+                        <li>Responsive Design</li>
+                    </ul>
+
+                    <footer class="project-card-footer">
+                        <a href="#contact">Ask About This Project</a>
+                    </footer>
+                </article>
+            </div>
         </section>
+
+        <!-- Contact Form -->
+        <section id="contact" class="content-section">
+            <h2>Contact Me</h2>
+            <p>Send a message using the form below.</p>
+
+            <form id="contact-form">
+                <div class="form-field">
+                    <label for="contact-name">Your name</label>
+                    <input
+                        id="contact-name"
+                        name="name"
+                        type="text"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="form-field">
+                    <label for="contact-email">Email address</label>
+                    <input
+                        id="contact-email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-field">
+                    <label for="contact-message">Message</label>
+                    <textarea
+                        id="contact-message"
+                        name="message"
+                        rows="5"
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+
+                <p
+                    id="form-status"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+            </form>
+        </section>
+
     </main>
 
     <footer class="site-footer">
-        <p>© 2026 Mai Danh Tien</p>
+        <p>&copy; 2026 Mai Danh Tien. All rights reserved.</p>
     </footer>
-<script src="js/main.js"></script>
 </body>
 
 </html>
+```
