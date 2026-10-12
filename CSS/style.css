@@ -1,0 +1,81 @@
+
+/* ========================================
+   T-02A: DESIGN TOKENS
+   ======================================== */
+
+:root {
+    color-scheme: light;
+
+    /* Colors */
+    --color-bg: #f5f7fa;
+    --color-surface: #ffffff;
+    --color-text: #172033;
+    --color-text-muted: #4b5563;
+    --color-primary: #174ea6;
+    --color-primary-hover: #123b7a;
+    --color-border: #cbd5e1;
+    --color-focus: #b45309;
+
+    /* Typography */
+    --font-body: Arial, Helvetica, sans-serif;
+
+    /* Spacing */
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+
+    /* Layout */
+    --content-width: 72rem;
+}
+
+/* ========================================
+   CSS RESET
+   ======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
+
+body {
+    min-width: 0;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-primary-hover);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+}
