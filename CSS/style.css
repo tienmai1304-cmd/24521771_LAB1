@@ -507,3 +507,33 @@ main {
         scroll-behavior: auto;
     }
 }
+
+
+/* T-03C: Empty and Error States */
+.projects-message {
+    margin-top: var(--space-4);
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.projects-message[hidden],
+#projects-retry[hidden] {
+    display: none;
+}
+
+#projects-retry {
+    margin-top: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    color: var(--color-bg);
+    background-color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+#projects-retry:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}

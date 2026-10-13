@@ -139,17 +139,72 @@ function createProjectCard(project) {
     return article;
 }
 
+
+function showProjectsMessage(message, showRetry = false) {
+    const messageBox = document.querySelector("#projects-message");
+    const messageText = document.querySelector("#projects-message-text");
+    const retryButton = document.querySelector("#projects-retry");
+
+    messageText.textContent = message;
+    messageBox.hidden = false;
+    retryButton.hidden = !showRetry;
+}
+
 function renderProjects(projectList) {
-    projectsContainer.replaceChildren();
+    const container = document.querySelector("#projects-container");
+    const status = document.querySelector("#projects-status");
+    const messageBox = document.querySelector("#projects-message");
+
+    container.replaceChildren();
+    messageBox.hidden = true;
+
+    if (projectList.length === 0) {
+        container.setAttribute("aria-busy", "false");
+        status.textContent = "No projects available.";
+
+        showProjectsMessage(
+            "There are currently no projects to display."
+        );
+        return;
+    }
 
     projectList.forEach((project) => {
         const card = createProjectCard(project);
-        projectsContainer.append(card);
+        container.append(card);
     });
 
-    projectsContainer.setAttribute("aria-busy", "false");
-    projectsStatus.textContent =
-        `${projectList.length} projects loaded.`;
+    container.setAttribute("aria-busy", "false");
+    status.textContent = `${projectList.length} projects loaded.`;
 }
 
-renderProjects(projects);
+function loadProjects() {
+    const container = document.querySelector("#projects-container");
+    const status = document.querySelector("#projects-status");
+    const retryButton = document.querySelector("#projects-retry");
+
+    container.setAttribute("aria-busy", "true");
+    status.textContent = "Loading projects...";
+    retryButton.hidden = true;
+
+    try {
+        // T-03B currently uses local data, so loading is synchronous.
+        renderProjects(projects);
+    } catch (error) {
+        container.replaceChildren();
+        container.setAttribute("aria-busy", "false");
+        status.textContent = "Unable to load projects.";
+
+        showProjectsMessage(
+            "Something went wrong while loading projects. Please try again.",
+            true
+        );
+
+        console.error("Project loading failed:", error);
+    }
+}
+
+document.querySelector("#projects-retry").addEventListener("click", () => {
+    loadProjects();
+});
+
+loadProjects();
