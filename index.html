@@ -110,78 +110,22 @@
             </ul>
         </section>
 
+        
         <!-- Project Cards -->
         <section id="projects" class="content-section">
             <h2>Featured Projects</h2>
 
-            <div class="projects-grid">
-                <article class="project-card" data-category="frontend">
-                    <header class="project-card-header">
-                        <p class="project-category">Frontend</p>
-                        <h3>Semantic DOM Architecture</h3>
-                    </header>
+            <p id="projects-status" role="status" aria-live="polite">
+                Projects are ready to load.
+            </p>
 
-                    <p>
-                        A semantic HTML portfolio focused on accessibility,
-                        meaningful page structure, and keyboard navigation.
-                    </p>
-
-                    <ul class="tag-list" aria-label="Technologies used">
-                        <li>HTML5</li>
-                        <li>Accessibility</li>
-                        <li>CSS</li>
-                    </ul>
-
-                    <footer class="project-card-footer">
-                        <a href="#about">View Project Details</a>
-                    </footer>
-                </article>
-
-                <article class="project-card" data-category="python">
-                    <header class="project-card-header">
-                        <p class="project-category">Python</p>
-                        <h3>Product Management Application</h3>
-                    </header>
-
-                    <p>
-                        A Python application for managing products,
-                        orders, quantities, and total prices.
-                    </p>
-
-                    <ul class="tag-list" aria-label="Technologies used">
-                        <li>Python</li>
-                        <li>SQL</li>
-                        <li>Data Management</li>
-                    </ul>
-
-                    <footer class="project-card-footer">
-                        <a href="#contact">Ask About This Project</a>
-                    </footer>
-                </article>
-
-                <article class="project-card" data-category="web">
-                    <header class="project-card-header">
-                        <p class="project-category">Web Development</p>
-                        <h3>Responsive Portfolio</h3>
-                    </header>
-
-                    <p>
-                        A responsive portfolio with reusable UI components
-                        and a persistent light and dark theme.
-                    </p>
-
-                    <ul class="tag-list" aria-label="Technologies used">
-                        <li>CSS Grid</li>
-                        <li>JavaScript</li>
-                        <li>Responsive Design</li>
-                    </ul>
-
-                    <footer class="project-card-footer">
-                        <a href="#contact">Ask About This Project</a>
-                    </footer>
-                </article>
-            </div>
+            <div
+                id="projects-container"
+                class="projects-grid"
+                aria-busy="false"
+            ></div>
         </section>
+
 
         <!-- Contact Form -->
         <section id="contact" class="content-section">
