@@ -12,7 +12,7 @@
     --color-text-muted: #4b5563;
     --color-primary: #174ea6;
     --color-primary-hover: #123b7a;
-    --color-border: #cbd5e1;
+    --color-border: #64748b;
     --color-focus: #b45309;
 
     --font-body: Arial, Helvetica, sans-serif;
@@ -37,7 +37,7 @@
     --color-text-muted: #d1d5db;
     --color-primary: #93c5fd;
     --color-primary-hover: #bfdbfe;
-    --color-border: #4b5563;
+    --color-border: #6b7280;
     --color-focus: #fcd34d;
 
     --shadow-card: 0 4px 16px rgb(0 0 0 / 20%);
@@ -514,7 +514,7 @@ main {
     margin-top: var(--space-4);
     padding: var(--space-4);
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-card);
     text-align: center;
 }
 
@@ -529,11 +529,11 @@ main {
     color: var(--color-bg);
     background-color: var(--color-text);
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-sm);
+    border-radius: 0.5rem;
     cursor: pointer;
 }
 
 #projects-retry:focus-visible {
-    outline: 3px solid var(--color-accent);
+    outline: 3px solid var(--color-focus);
     outline-offset: 3px;
 }
