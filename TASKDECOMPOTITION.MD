@@ -147,3 +147,15 @@ perf: optimize assets
 - Test keyboard navigation and theme switching.
 - Check the browser Console for errors.
 - Confirm all required changes are committed and pushed.
+
+Results recorded:
+
+- Test URL: `http://127.0.0.1:8000/index.html`
+- Test environment: Chrome Incognito using Python's local HTTP server.
+- Lighthouse Performance: 100/100.
+- Lighthouse Accessibility: 100/100.
+- Lighthouse Best Practices: 100/100.
+- Lighthouse SEO: 100/100.
+- The initial Live Server audit reported an injected-script CSP warning. The audit was repeated using Python's HTTP server to avoid the Live Server injected script.
+- Layout shift verification: completed; CLS was 0 in the recorded Performance trace.
+- Responsive viewport verification: passed at 375px width; Projects, Contact, theme switching, and page layout were tested.
